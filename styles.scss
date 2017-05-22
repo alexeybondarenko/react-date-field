@@ -1,0 +1,76 @@
+@import "variables.scss";
+
+.dateField {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  font-size: 16px;
+
+  .label {
+    margin-bottom: 5px;
+  }
+
+  .control {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .input {
+    line-height: 24px;
+    box-shadow: 0 1px 0 #ded8de;
+    display: inline-block;
+    width: 100%;
+    font-size: inherit;
+    cursor: pointer;
+
+    &:focus {
+      box-shadow: 0 1px 0 $primary-color;
+    }
+  }
+
+  .error {
+    font-size: 12px;
+    margin-top: 5px;
+  }
+
+  &_errored {
+    .input {
+      box-shadow: 0 1px 0 $danger-color;
+    }
+
+    .error {
+      color: $danger-color;
+    }
+  }
+
+  &_focused {
+    .calendarWrap {
+      display: block;
+      animation: fadeIn 0.15s ease-in;
+      transform-origin: left top;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0.4;
+    transform: scale3d(0.6, 0.6, 1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.calendarWrap {
+  position: absolute;
+  display: none;
+  background: white;
+  box-shadow: 0 2px 16px -8px rgba(0, 0, 0, 0.6);
+  width: auto;
+  min-width: 150px;
+  margin-bottom: 24px;
+  z-index: 10;
+}

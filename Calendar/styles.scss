@@ -1,0 +1,38 @@
+
+.calendar {
+  position: relative;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  position: absolute;
+  width: 100%;
+  top: 0;
+
+  &__prev,
+  &__next {
+    flex: 0 0 auto;
+    padding: 24px;
+    cursor: pointer;
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: 0 12px 12px;
+
+  &__view {
+    flex: 1 1 auto;
+    padding: 12px;
+    max-width: 270px;
+  }
+}

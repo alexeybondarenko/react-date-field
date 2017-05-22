@@ -1,0 +1,39 @@
+@import "variables.scss";
+
+.view {
+  table-layout: fixed;
+
+  th {
+    font-weight: 500;
+  }
+
+  thead th {
+    padding-bottom: 12px;
+  }
+
+  th,
+  td {
+    width: 2%;
+    text-align: center;
+    font-size: 14px;
+  }
+}
+
+.day {
+  padding: 6px;
+  cursor: pointer;
+
+  &_outOfRange {
+    opacity: 0.3;
+  }
+
+  &_selected {
+    background: $primary-color;
+    color: white;
+  }
+}
+
+.title {
+  text-align: center;
+  padding: 12px;
+}
